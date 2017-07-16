@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "deploy runner with scripts and templates",
   "main": "index.js",
+  "bin": {
+    "sloth": "./bin/sloth"
+  },
   "scripts": {
     "test": "node test"
   },
