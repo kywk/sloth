@@ -20,13 +20,13 @@ function sortNumber (a, b) {
  * sloth.js: Util functions
  */
 function getDirObj (path) {
-  var obj = {};
+  let obj = {};
   try {
     path = path.match(/\/$/) ? path : path + '/';
-    var _pstats = fs.statSync(path);
+    let _pstats = fs.statSync(path);
     if (_pstats.isDirectory()) {
-      var _files = fs.readdirSync(path);
-      for (var i = 0; i < _files.length; i++) {
+      let _files = fs.readdirSync(path);
+      for (let i = 0; i < _files.length; i++) {
         if (_files[i].match(/.?json$/))
           obj[_files[i].split(/(.?)json$/)[0]] = require(path + _files[i]);
       }

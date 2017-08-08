@@ -1,0 +1,40 @@
+{
+  "SERVERS": {
+     "cow_mbp": "127.0.0.1",
+     "ci": "192.168.1.210"
+  },
+
+  "CONSTANT": {
+    "mysql": {
+      "id": "kywk",
+      "pwd": "pw123456",
+      "port": 3306
+    }
+  },
+
+  "mysql": {
+    "system": [
+      {"server": "#cow_mbp", "port": 3306, "user": "${mysql.id}", "pwd": "${mysql.pwd}", "db": "svrSystem"}
+    ],
+    "seniorMember": [
+      {"server": "#cow_mbp", "port": 3306, "user": "${mysql.id}", "pwd": "${mysql.pwd}", "db": "seniorMember"}
+    ]
+  },
+
+  "redis": {
+    "channel": [
+      {"server": "#cow_mbp", "port": "${redis.port}", "pwd": "${redis.pass}", "db": 0}
+    ]
+  },
+
+  "tbs": {
+    "gate": [{}],
+    "web": {},
+  },
+
+  "slotgame": {
+
+
+
+  }
+}
